@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMSS-BIENESTAR !!Noticias hoy!!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1ec;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0b3b2e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        /* Estilo ticker */
+        .ticker-container {
+            background-color: #a30000;
+            color: white;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 8px 0;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .ticker {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker-scroll 25s linear infinite;
+        }
+        @keyframes ticker-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+        .news-item {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-left: 6px solid #a30000;
+            padding: 15px;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .news-item h3 {
+            font-size: 1em;
+            margin: 0 0 8px 0;
+            color: #0b3b2e;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .news-item p {
+            flex: 1;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .news-item a {
+            background-color: #0b3b2e;
+            color: white;
+            padding: 7px;
+            text-decoration: none;
+            font-size: 0.85em;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .news-item a:hover {
+            background-color: #a30000;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.8em;
+        }
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IMSS-BIENESTAR !!Noticias hoy!!</h1>
+    </header>
+
+    <!-- Ticker de noticias dinámico -->
+    <div class="ticker-container">
+        <div id="ticker" class="ticker"></div>
+    </div>
+
+    <!-- Cuadrícula dinámica -->
+    <section id="newsGrid" class="news-grid"></section>
+
+    <footer>
+        © 2025 IMSS-BIENESTAR Noticias | Sitio informativo no oficial
+    </footer>
+
+    <script>
+        // Cargar noticias desde noticias.json
+        fetch('noticias.json')
+            .then(response => response.json())
+            .then(data => {
+                // Render ticker
+                const tickerEl = document.getElementById('ticker');
+                tickerEl.textContent = data.ticker.join(" | ");
+
+                // Render grid
+                const newsGrid = document.getElementById('newsGrid');
+                data.grid.forEach(noticia => {
+                    const item = document.createElement('div');
+                    item.classList.add('news-item');
+                    item.innerHTML = `
+                        <h3>${noticia.titulo}</h3>
+                        <p>${noticia.descripcion}</p>
+                        <a href="${noticia.link}" target="_blank">Más información</a>
+                    `;
+                    newsGrid.appendChild(item);
+                });
+            })
+            .catch(error => console.error('Error cargando noticias:', error));
+    </script>
+</body>
+</html>

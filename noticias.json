@@ -1,0 +1,71 @@
+{
+    "ticker": [
+        "🚑 Nuevo hospital en Morelos dentro del Plan Lázaro Cárdenas-Cuenca Balsas",
+        "💉 Jornada nacional de vacunación contra influenza y COVID-19",
+        "🏥 Se incorporan 50 nuevas ambulancias para zonas rurales",
+        "📦 Abasto de medicamentos garantizado al 98% en farmacias IMSS-BIENESTAR",
+        "🩺 Llegan nuevos médicos y enfermeras a zonas indígenas"
+    ],
+    "grid": [
+        {
+            "titulo": "Entrega de medicinas en zonas rurales",
+            "descripcion": "IMSS-BIENESTAR refuerza la distribución de medicamentos esenciales en comunidades apartadas.",
+            "link": "https://www.imss.gob.mx"
+        },
+        {
+            "titulo": "Nuevo hospital en Morelos",
+            "descripcion": "Avanza la construcción del hospital regional del Plan Lázaro Cárdenas-Cuenca Balsas.",
+            "link": "https://www.imss.gob.mx"
+        },
+        {
+            "titulo": "Jornada nacional de vacunación",
+            "descripcion": "Se aplican dosis contra influenza y COVID-19 en clínicas IMSS-BIENESTAR.",
+            "link": "https://www.imss.gob.mx"
+        },
+        {
+            "titulo": "La Clínica es Nuestra",
+            "descripcion": "Programa impulsa mejoras en centros de salud con participación comunitaria.",
+            "link": "https://www.gob.mx"
+        },
+        {
+            "titulo": "Refuerzo de personal médico",
+            "descripcion": "Llegan nuevos médicos y enfermeras a hospitales en zonas indígenas.",
+            "link": "https://www.imss.gob.mx"
+        },
+        {
+            "titulo": "Clínicas móviles",
+            "descripcion": "Unidades móviles llevan consultas y medicinas a localidades sin hospital.",
+            "link": "https://www.imss.gob.mx"
+        },
+        {
+            "titulo": "Abasto de medicamentos",
+            "descripcion": "Se garantiza 98% de abasto en farmacias IMSS-BIENESTAR este trimestre.",
+            "link": "https://www.imss.gob.mx"
+        },
+        {
+            "titulo": "Programa de Salud Materna",
+            "descripcion": "Se fortalecen acciones para prevenir muertes maternas en zonas rurales.",
+            "link": "https://www.imss.gob.mx"
+        },
+        {
+            "titulo": "Atención odontológica",
+            "descripcion": "Nuevos consultorios dentales en hospitales comunitarios.",
+            "link": "https://www.imss.gob.mx"
+        },
+        {
+            "titulo": "Capacitación médica",
+            "descripcion": "Profesionales reciben cursos en atención integral de enfermedades crónicas.",
+            "link": "https://www.imss.gob.mx"
+        },
+        {
+            "titulo": "Rehabilitación de hospitales",
+            "descripcion": "Modernización de infraestructura hospitalaria en Chiapas y Oaxaca.",
+            "link": "https://www.imss.gob.mx"
+        },
+        {
+            "titulo": "Entrega de ambulancias",
+            "descripcion": "Se incorporan 50 nuevas ambulancias para zonas rurales y de difícil acceso.",
+            "link": "https://www.imss.gob.mx"
+        }
+    ]
+}
